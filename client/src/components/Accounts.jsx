@@ -1,10 +1,10 @@
 import "./Main.css";
 
-function Accounts() {
+function Accounts({web3,setAddress}) {
   return (
     <>
       <form className="label1" id="myForm">
-        <label htmlFor="">Select an account</label>
+        <label htmlFor="selectNumber">Select an account</label>
         <select className="innerBox" id="selectNumber">
           <option></option>
         </select>
