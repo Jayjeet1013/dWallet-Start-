@@ -7,6 +7,12 @@ import "./App.css";
 
 function App() {
   const [web3, setWeb3] = useState(null);
+  const [account,setAccount]= useState(null);
+
+  function setAddress(address){
+    setAccount(address);
+  }
+
   useEffect(() => {
     const init = async () => {
       try {
@@ -26,7 +32,7 @@ function App() {
         <Welcome />
       </div>
       <div className="Account">
-        <Accounts />
+        <Accounts web3={web3} setAddress={setAddress}/>
       </div>
 
       <div>

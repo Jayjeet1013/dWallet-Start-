@@ -1,10 +1,17 @@
 import "./Main.css";
 
-function Accounts() {
+function Accounts({web3,setAddress}) {
+  async function allAccounts(){
+    const select=domain.querySelector("#selectNumber")
+    const options=await web3.eth.getAccounts();
+    for(let i=0;i<options.length;i++){
+      
+    }
+  }
   return (
     <>
       <form className="label1" id="myForm">
-        <label htmlFor="">Select an account</label>
+        <label htmlFor="selectNumber">Select an account</label>
         <select className="innerBox" id="selectNumber">
           <option></option>
         </select>
