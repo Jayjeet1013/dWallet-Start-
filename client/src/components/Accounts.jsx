@@ -5,7 +5,6 @@ function Accounts({web3,setAddress}) {
     const select=domain.querySelector("#selectNumber")
     const options=await web3.eth.getAccounts();
     for(let i=0;i<options.length;i++){
-      
     }
   }
   return (
